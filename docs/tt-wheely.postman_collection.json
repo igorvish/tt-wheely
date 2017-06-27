@@ -1,0 +1,125 @@
+{
+	"variables": [],
+	"info": {
+		"name": "tt-wheely",
+		"_postman_id": "fd27d24d-3ae1-e186-dc57-2c6653c473a0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Routing service request",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3001/route?from=34.1330949,-117.9143879&to=33.8068768,-118.3527671",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"route"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "34.1330949,-117.9143879",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "to",
+							"value": "33.8068768,-118.3527671",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tariff service request (all plans)",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3002/rate?from=34.1330949,-117.9143879&to=33.8068768,-118.3527671",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"rate"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "34.1330949,-117.9143879",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "to",
+							"value": "33.8068768,-118.3527671",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tariff service request (by_kilometers plan)",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3002/rate?from=34.1330949,-117.9143879&to=33.8068768,-118.3527671&plan=by_kilometers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"rate"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "34.1330949,-117.9143879",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "to",
+							"value": "33.8068768,-118.3527671",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "plan",
+							"value": "by_kilometers",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

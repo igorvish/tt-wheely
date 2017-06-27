@@ -1,0 +1,25 @@
+tariff_plans:
+  base:
+    calculator:   plain_calc
+    pickup_cost:  150
+    per_minute:   15
+    per_km:       38
+    min_cost:     299
+  balanced:
+    calculator:   avg_of_kilo_and_duration_calc
+    pickup_cost:  150
+    per_minute:   15
+    per_km:       38
+    min_cost:     299
+  by_kilometers:
+    calculator:   plain_calc
+    pickup_cost:  150
+    per_minute:   0
+    per_km:       38
+    min_cost:     299
+  by_minute:
+    calculator:   plain_calc
+    pickup_cost:  150
+    per_minute:   15
+    per_km:       0
+    min_cost:     299

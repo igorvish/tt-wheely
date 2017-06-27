@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  rate-service:
+    build: ./rate-service
+    ports:
+      - "3002:3002"
+    environment:
+      - RACK_ENV=development
+      - ROUTING_SVC_HOST=http://routing-service:3001
+    depends_on:
+      - routing-service
+
+  routing-service:
+    build: ./routing-service
+    ports:
+      - "3001:3001"
+    environment:
+      - RACK_ENV=development
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:3.0-alpine
+    ports:
+      - "6379:6379"    

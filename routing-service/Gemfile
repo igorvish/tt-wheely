@@ -1,0 +1,17 @@
+source 'https://rubygems.org'
+
+ruby '2.4.1'
+
+gem 'puma'
+gem 'sinatra'
+gem 'faraday'
+gem 'oj'
+gem 'dry-validation'
+
+# We want ActiveSupport::Cache
+gem 'activesupport'
+gem 'redis'
+gem 'redis-store'
+gem 'redis-activesupport'
+
+gem 'c_geohash', require: 'geohash'
